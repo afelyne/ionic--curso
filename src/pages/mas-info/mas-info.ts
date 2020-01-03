@@ -1,15 +1,23 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+/**
+ * Generated class for the MasInfoPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-mas-info',
+  templateUrl: 'mas-info.html',
 })
-export class ContactPage {
+export class MasInfoPage {
 
-  items = [];
+  items= [];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [
       {
         'title': 'Angular',
@@ -64,7 +72,12 @@ export class ContactPage {
         'icon': 'tux',
         'description': 'The official mascot of the linux kernel.',
         'color': '#000'
-      },
+      }
     ]
   }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad MasInfoPage');
+  }
+
 }
