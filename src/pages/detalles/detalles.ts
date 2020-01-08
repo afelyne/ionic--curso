@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 /**
  * Generated class for the DetallesPage page.
  *
@@ -15,11 +14,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetallesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetallesPage');
   }
 
+  showAlert(){
+    const alert = this.alertCtrl.create({
+      title: 'Buen trabajo!',
+      subTitle: 'Vamos bien, no pares!',
+      inputs: [
+        {
+          name: 'nombre',
+          placeholder: 'Nombre'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
+            console.log('Cancelado');
+          }
+        },
+        {
+          text: 'Guardar',
+          handler: data => {
+            console.log('Guardado');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 }

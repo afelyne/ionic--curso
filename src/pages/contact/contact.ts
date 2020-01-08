@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {MasInfoPage} from '../mas-info/mas-info';
 
 @Component({
   selector: 'page-contact',
@@ -66,5 +67,9 @@ export class ContactPage {
         'color': '#000'
       },
     ]
+  }
+
+  goToMoreInfo( item ){
+    this.navCtrl.push( MasInfoPage, { item: item } );
   }
 }

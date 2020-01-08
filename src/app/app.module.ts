@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { PsPage } from '../pages/ps/ps';
 import { DetallesPage } from '../pages/detalles/detalles';
+import { MasInfoPage } from '../pages/mas-info/mas-info';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     PsPage,
     DetallesPage,
+    MasInfoPage,
     TabsPage
   ],
   imports: [
@@ -35,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     PsPage,
     DetallesPage,
+    MasInfoPage,
     TabsPage
   ],
   providers: [
